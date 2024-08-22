@@ -1,17 +1,17 @@
 bus_id,trip_number,start_stop,end_stop,route_name,direction,route_id,distance,start_time,end_time,runtime,minBreak_time,ready_time,actualBreak_time,shift_id,isDeadTrip
 ABD1,1,Depot-39,Hosakote Bus Stand (Old),N/A,UP,328-H,2,07:37:00,07:42:00,00:05:00,00:05:00,07:47:00,00:05:00,NightOut 1,False
 ABD1,2,Hosakote Bus Stand (Old),Attibele Bus Stand,328H,DN,328-DN,40,07:47:00,09:37:00,01:50:00,00:05:00,09:42:00,00:05:00,NightOut 1,False
-ABD1,3,Attibele Bus Stand,Hosakote Bus Stand (Old),328H,UP,328-UP,40,09:42:00,11:32:00,01:50:00,00:30:00,12:02:00,00:30:00,NightOut 1,False
+ABD1,3,Attibele Bus Stand,Hosakote Bus Stand (Old),328H,UP,328-UP,40,09:44:00,11:32:00,01:50:00,00:30:00,12:02:00,00:30:00,NightOut 1,False
 ABD1,4,Hosakote Bus Stand (Old),Attibele Bus Stand,328H,DN,328-DN,40,12:02:00,13:42:00,01:40:00,00:05:00,13:47:00,00:05:00,NightOut 1,False
 ABD1,5,Attibele Bus Stand,Hosakote Bus Stand (Old),328H,UP,328-UP,40,13:47:00,15:27:00,01:40:00,00:30:00,15:57:00,00:30:00,NightOut 1,False
-ABD1,6,Hosakote Bus Stand (Old),Sarjapura,328H,UP,328-UP,30,15:57:00,17:07:00,01:10:00,00:05:00,17:12:00,00:05:00,NightOut 1,False
+ABD1,6,Hosakote Bus Stand (Old),Sarjapura,328H,UP,328-UP,30,15:59:00,17:07:00,01:10:00,00:05:00,17:12:00,00:05:00,NightOut 1,False
 ABD1,7,Sarjapura,Hosakote Bus Stand (Old),328H,UP,328-UP,30,17:12:00,18:22:00,01:10:00,00:05:00,18:27:00,00:05:00,NightOut 1,False
 ABD1,8,Hosakote Bus Stand (Old),Depot 39,328H,,328H,2,18:27:00,18:32:00,00:05:00,00:00:00,18:32:00,00:00:00,NightOut 1,True
 ABD2,1,Depot-32,Attibele Bus Stand,N/A,DN,328-H,2,07:37:00,07:42:00,00:05:00,00:05:00,07:47:00,00:05:00,NightOut 1,False
 ABD2,2,Attibele Bus Stand,Hosakote Bus Stand (Old),328H,UP,328-UP,40,07:47:00,09:37:00,01:50:00,00:05:00,09:42:00,00:05:00,NightOut 1,False
-ABD2,3,Hosakote Bus Stand (Old),Attibele Bus Stand,328H,DN,328-DN,40,09:42:00,11:32:00,01:50:00,00:30:00,12:02:00,00:30:00,NightOut 1,False
+ABD2,3,Hosakote Bus Stand (Old),Attibele Bus Stand,328H,DN,328-DN,40,09:44:00,11:32:00,01:50:00,00:30:00,12:02:00,00:30:00,NightOut 1,False
 ABD2,4,Attibele Bus Stand,Hosakote Bus Stand (Old),328H,UP,328-UP,40,12:02:00,13:42:00,01:40:00,00:05:00,13:47:00,00:05:00,NightOut 1,False
 ABD2,5,Hosakote Bus Stand (Old),Attibele Bus Stand,328H,DN,328-DN,40,13:47:00,15:27:00,01:40:00,00:30:00,15:57:00,00:30:00,NightOut 1,False
-ABD2,6,Attibele Bus Stand,Kadugudi,328H,DN,328-DN,30,15:57:00,17:07:00,01:10:00,00:05:00,17:12:00,00:05:00,NightOut 1,False
+ABD2,6,Attibele Bus Stand,Kadugudi,328H,DN,328-DN,30,15:59:00,17:07:00,01:10:00,00:05:00,17:12:00,00:05:00,NightOut 1,False
 ABD2,7,Kadugudi,Attibele Bus Stand,328H,DN,328-DN,30,17:12:00,18:22:00,01:10:00,00:05:00,18:27:00,00:05:00,NightOut 1,False
 ABD2,8,Attibele Bus Stand,Depot 32,328H,,328H,7,18:27:00,18:32:00,00:05:00,00:00:00,18:32:00,00:00:00,NightOut 1,True

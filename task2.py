@@ -42,9 +42,12 @@ def get_available(new_start_time,start_stop_to_check):
         # Check if new_start_time is in the list for the specific start_stop
         if start_stop_to_check in grouped:
             if new_start_time in grouped[start_stop_to_check]:
-                new_start_time=pd.to_datetime(new_start_time, format='%H:%M:%S')+timedelta(2)
+                new_start_time=pd.to_datetime(new_start_time, format='%H:%M:%S')+timedelta(minutes=2)
             else:
                  break
+    new_start_time = pd.Timestamp(new_start_time)
+    new_start_time = pd.to_timedelta(new_start_time.strftime('%H:%M:%S'))
+    print(new_start_time)
     return new_start_time
 
 def get_travel_time(current_time):
@@ -87,7 +90,8 @@ for hour in range(24):
         midnight = pd.Timestamp('1900-01-01')  # Reference point for midnight
         new_start_time = pd.to_timedelta(new_start_time - midnight)
         start_time=new_start_time
-        print(start_time)
+
+        # print(start_time)
         if(shift=="General Shift"):
             # print(exceeded_df)
             # print("General")
@@ -110,6 +114,7 @@ for hour in range(24):
                 run_time=timedelta(minutes=5)
                 min_break=timedelta(minutes=5)
                 start_time=start_time-run_time-min_break
+                start_time=get_available(start_time,"Depot-39")
                 end_time=start_time+run_time
                 ready_time=end_time+min_break
                 end_stop=start_stop
@@ -143,6 +148,7 @@ for hour in range(24):
                 run_time=timedelta(minutes=5)
                 min_break=timedelta(minutes=5)
                 start_time=start_time-run_time-min_break
+                start_time=get_available(start_time,"Depot-32")
                 end_time=start_time+run_time
                 ready_time=end_time+min_break
                 end_stop=start_stop
@@ -206,6 +212,7 @@ for hour in range(24):
                                 runtime = get_travel_time(actual_start)
                                 min_break = timedelta(minutes=5)
                                 start_time = actual_start
+                                start_time=get_available(start_time,start_stop)
                                 distance=40
 
                                 
@@ -253,6 +260,7 @@ for hour in range(24):
                         route_name = '328H'
                         min_break = timedelta(minutes=5)
                         start_time = actual_start
+                        start_time=get_available(start_time,start_stop)
                         # # Calculate the duration since the start time
                         # elapsed_time = actual_start - temp_time
 
@@ -292,6 +300,7 @@ for hour in range(24):
                         route_name = '328H'
                         min_break = timedelta(minutes=5)
                         start_time = actual_start
+                        start_time=get_available(start_time,start_stop)
 
                         # if elapsed_time > max_runtime_duration:
                         #     min_break = timedelta(minutes=30)
@@ -329,6 +338,7 @@ for hour in range(24):
                 trip_no+=1
                 route_id="328H"
                 start_time=ready_time
+                start_time=get_available(start_time,start_stop)
                 min_break=timedelta(hours=0,minutes=0)
                 runtime=timedelta(minutes=5)
                 end_time=start_time+runtime
@@ -377,6 +387,7 @@ for hour in range(24):
                                 runtime = get_travel_time(actual_start)
                                 min_break = timedelta(minutes=5)
                                 start_time = actual_start
+                                start_time=get_available(start_time,start_stop)
                                 distance=40
 
                                 
@@ -424,6 +435,7 @@ for hour in range(24):
                         route_name = '328H'
                         min_break = timedelta(minutes=5)
                         start_time = actual_start
+                        start_time=get_available(start_time,start_stop)
                         # # Calculate the duration since the start time
                         # elapsed_time = actual_start - temp_time
 
@@ -463,6 +475,7 @@ for hour in range(24):
                         route_name = '328H'
                         min_break = timedelta(minutes=5)
                         start_time = actual_start
+                        start_time=get_available(start_time,start_stop)
 
                         # if elapsed_time > max_runtime_duration:
                         #     min_break = timedelta(minutes=30)
@@ -500,6 +513,7 @@ for hour in range(24):
                 trip_no+=1
                 route_id="328H"
                 start_time=ready_time
+                start_time=get_available(start_time,start_stop)
                 min_break=timedelta(hours=0,minutes=0)
                 runtime=timedelta(minutes=5)
                 end_time=start_time+runtime
@@ -525,6 +539,6 @@ for hour in range(24):
                 actual_start = ready_time
 df = pd.DataFrame(sc)
 
-output_file_path = 'check2.csv'
+output_file_path = 'check3.csv'
 schedule_df = pd.DataFrame(df)
 schedule_df.to_csv(output_file_path, index=False)
